@@ -2,16 +2,16 @@ package designpattern_mvp.calculator.Model;
 
 public interface CalculatorInterface {
 
-    double addition = 0;
-    double substraction = 0;
-    double multiplication = 0;
-    double division = 0;
+    double getAddition();
 
-    double getaddition();
+    double getSubtract();
 
-    double getSubstraction();
-
-    double getMultiplicaiton();
+    double getMultiplication();
 
     double getDivision();
+
+    double addition = 0;
+    double subtraction = 0;
+    double multiplication = 0;
+    double division = 0;
 }

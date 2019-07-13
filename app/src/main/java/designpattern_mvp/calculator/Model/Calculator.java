@@ -2,18 +2,27 @@ package designpattern_mvp.calculator.Model;
 
 public class Calculator implements CalculatorInterface {
 
+    private double addition, subtraction, multiplication, division;
+
+    public Calculator(double addition, double subtraction, double multiplication, double division) {
+        this.addition = addition;
+        this.subtraction = subtraction;
+        this.multiplication = multiplication;
+        this.division = division;
+    }
+
     @Override
-    public double getaddition() {
+    public double getAddition() {
         return addition;
     }
 
     @Override
-    public double getSubstraction() {
-        return substraction;
+    public double getSubtract() {
+        return subtraction;
     }
 
     @Override
-    public double getMultiplicaiton() {
+    public double getMultiplication() {
         return multiplication;
     }
 
@@ -21,5 +30,4 @@ public class Calculator implements CalculatorInterface {
     public double getDivision() {
         return division;
     }
-
 }
