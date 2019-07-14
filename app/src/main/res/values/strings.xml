@@ -3,4 +3,5 @@
     <string name="title_home">History</string>
     <string name="title_dashboard">Generate Results</string>
     <string name="title_notifications">Logs</string>
+    <string name="buttons">buttons</string>
 </resources>
