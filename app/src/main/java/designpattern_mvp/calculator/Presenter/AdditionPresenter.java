@@ -1,19 +1,45 @@
 package designpattern_mvp.calculator.Presenter;
 
-import designpattern_mvp.calculator.Model.Calculator;
+import designpattern_mvp.calculator.Model.NumbersModel;
 import designpattern_mvp.calculator.View.AdditionViewInterface;
 
-public class AdditionPresenter implements AdditionPresenterInterface {
+public class AdditionPresenter extends NumbersModel implements AdditionViewInterface {
 
     AdditionViewInterface additionView;
+    NumbersModel numbersModel;
 
-    public AdditionPresenter(AdditionViewInterface additionView) {
-        this.additionView = additionView;
+
+    public NumbersModel NumbersModelPresenter(NumbersModel nrsModel) {
+        return nrsModel;
+    }
+
+
+    public AdditionPresenter(double number3, double number4) {
+        super(1, 2);
+
     }
 
     @Override
-    public void onAddition(double addition) {
-        Calculator calculator = new Calculator(addition);
+    public double[] multipleResult(double number1, double number2) {
+        VerifyVariables(number1, number2); //TODO: verify string numbers
+
+        return new double[]
+                {
+                        number1 + number2,
+                        number1 - number2,
+                        number1 * number2,
+                        number1 / number2,
+                        number1 % number2
+                };
     }
 
+    @Override
+    public void getNumber1() {
+
+    }
+
+    private boolean VerifyVariables(double number1, double number2) {
+        return true;
+
+    }
 }

@@ -5,18 +5,137 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/cardview_shadow_start_color"
+    tools:context=".main.MainActivity">
 
-    <TextView
-        android:id="@+id/message"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/Digit0"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text="@string/title_home"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@android:color/transparent"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Digit9"
+        app:layout_constraintStart_toEndOf="@+id/Digit9" />
+
+    <Button
+        android:id="@+id/Digit1"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="92dp"
+        android:background="@android:color/transparent"
+        android:text="1"
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number2Show" />
+
+    <Button
+        android:id="@+id/Digit2"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@android:color/transparent"
+        android:text="2"
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Digit1"
+        app:layout_constraintStart_toEndOf="@+id/Digit1" />
+
+    <Button
+        android:id="@+id/Digit3"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@android:color/transparent"
+        android:text="3"
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Digit2"
+        app:layout_constraintStart_toEndOf="@+id/Digit2" />
+
+    <Button
+        android:id="@+id/Digit4"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@android:color/transparent"
+        android:text="4"
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Digit3"
+        app:layout_constraintStart_toEndOf="@+id/Digit3" />
+
+    <Button
+        android:id="@+id/Digit5"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:text="5"
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="@+id/Digit1"
+        app:layout_constraintTop_toBottomOf="@+id/Digit1" />
+
+    <Button
+        android:id="@+id/Digit6"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@android:color/transparent"
+        android:text="6"
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Digit5"
+        app:layout_constraintStart_toEndOf="@+id/Digit5" />
+
+    <Button
+        android:id="@+id/Digit7"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@android:color/transparent"
+        android:text="7"
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Digit6"
+        app:layout_constraintStart_toEndOf="@+id/Digit6" />
+
+    <Button
+        android:id="@+id/digit8"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@android:color/transparent"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Digit7"
+        app:layout_constraintStart_toEndOf="@+id/Digit7" />
+
+    <Button
+        android:id="@+id/Digit9"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:background="@android:color/transparent"
+        android:text="9"
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="@+id/Digit5"
+        app:layout_constraintTop_toBottomOf="@+id/Digit5" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -29,5 +148,64 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_nav_menu" />
+
+    <EditText
+        android:id="@+id/number2Show"
+        android:layout_width="409dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="numberSigned|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number1Show" />
+
+    <EditText
+        android:id="@+id/number1Show"
+        android:layout_width="411dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.598"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/digit10"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:text="CLEAR"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Digit0"
+        app:layout_constraintEnd_toEndOf="@+id/digit8"
+        app:layout_constraintStart_toStartOf="@+id/Digit7"
+        app:layout_constraintTop_toBottomOf="@+id/Digit7"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="54dp"
+        android:layout_height="69dp"
+        tools:layout_editor_absoluteX="270dp"
+        tools:layout_editor_absoluteY="574dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

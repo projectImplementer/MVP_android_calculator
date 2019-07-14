@@ -1,4 +1,4 @@
-package designpattern_mvp.calculator;
+package designpattern_mvp.calculator.main;
 
 import android.os.Bundle;
 
@@ -8,10 +8,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.TextView;
+
+import designpattern_mvp.calculator.Presenter.AdditionPresenter;
+import designpattern_mvp.calculator.R;
 
 public class MainActivity extends AppCompatActivity {
     private TextView mTextMessage;
+    private AdditionPresenter additionView;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -38,8 +43,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
+        EditText nr1 = findViewById(R.id.number1Show);
+        EditText nr2 = findViewById(R.id.number2Show);
         mTextMessage = findViewById(R.id.message);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        double[] result = additionView.multipleResult();
+
     }
 
 }
