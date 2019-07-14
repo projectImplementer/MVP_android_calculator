@@ -14,9 +14,8 @@ public class AdditionPresenter extends NumbersModel implements AdditionViewInter
     }
 
 
-    public AdditionPresenter(double number3, double number4) {
+    public AdditionPresenter() {
         super(1, 2);
-
     }
 
     @Override

@@ -1,5 +1,6 @@
 package designpattern_mvp.calculator.main;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -8,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -23,14 +25,19 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            EditText nr1 = findViewById(R.id.number1Show);
+            EditText nr2 = findViewById(R.id.number2Show);
+
+            additionView = new AdditionPresenter();
             switch (item.getItemId()) {
-                case R.id.navigation_home:
+                case R.id.history:
                     mTextMessage.setText(R.string.title_home);
                     return true;
-                case R.id.navigation_dashboard:
+                case R.id.generate_results:
                     mTextMessage.setText(R.string.title_dashboard);
+                    additionView.multipleResult(Double.valueOf(nr1.getText().toString()), Double.valueOf(nr2.getText().toString()));
                     return true;
-                case R.id.navigation_notifications:
+                case R.id.logs:
                     mTextMessage.setText(R.string.title_notifications);
                     return true;
             }
@@ -43,11 +50,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        EditText nr1 = findViewById(R.id.number1Show);
-        EditText nr2 = findViewById(R.id.number2Show);
+
         mTextMessage = findViewById(R.id.message);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        double[] result = additionView.multipleResult();
+    }
+
+    @SuppressLint("DefaultLocale")
+    public void ShowData_Click(View v) {
 
     }
 
