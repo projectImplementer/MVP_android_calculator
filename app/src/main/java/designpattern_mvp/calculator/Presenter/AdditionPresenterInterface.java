@@ -1,6 +1,6 @@
 package designpattern_mvp.calculator.Presenter;
 
-public interface AdditionPresenterInterface {
+public interface ResultPresenterInterface {
 
     double generateResult();
 }
