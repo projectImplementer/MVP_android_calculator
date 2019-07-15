@@ -1,22 +1,20 @@
 package designpattern_mvp.calculator.Presenter;
 
+import android.view.View;
+
 import designpattern_mvp.calculator.Model.NumbersModel;
 import designpattern_mvp.calculator.View.AdditionViewInterface;
 
-public class ResultPresenter extends NumbersModel implements AdditionViewInterface {
+public class ResultPresenter implements AdditionViewInterface {
 
-    AdditionViewInterface additionView;
-    NumbersModel numbersModel;
-
-
-//     public NumbersModel NumbersModelPresenter(NumbersModel nrsModel) {
-//         return nrsModel;
-//     }
+    private AdditionViewInterface additionViewInterface;
+    private NumbersModel numbersModel;
 
 
-//     public AdditionPresenter() {
-//         super(1, 2);
-//     }
+    public ResultPresenter(AdditionViewInterface additionViewInterface) {
+        this.numbersModel = new NumbersModel();
+        this.additionViewInterface = additionViewInterface;
+    }
 
     @Override
     public double[] multipleResult(double number1, double number2) {
