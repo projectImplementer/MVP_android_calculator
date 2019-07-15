@@ -9,14 +9,14 @@ public class AdditionPresenter extends NumbersModel implements AdditionViewInter
     NumbersModel numbersModel;
 
 
-    public NumbersModel NumbersModelPresenter(NumbersModel nrsModel) {
-        return nrsModel;
-    }
+//     public NumbersModel NumbersModelPresenter(NumbersModel nrsModel) {
+//         return nrsModel;
+//     }
 
 
-    public AdditionPresenter() {
-        super(1, 2);
-    }
+//     public AdditionPresenter() {
+//         super(1, 2);
+//     }
 
     @Override
     public double[] multipleResult(double number1, double number2) {
