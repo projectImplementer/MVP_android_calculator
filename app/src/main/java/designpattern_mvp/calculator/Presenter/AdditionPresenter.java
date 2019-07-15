@@ -3,7 +3,7 @@ package designpattern_mvp.calculator.Presenter;
 import designpattern_mvp.calculator.Model.NumbersModel;
 import designpattern_mvp.calculator.View.AdditionViewInterface;
 
-public class AdditionPresenter extends NumbersModel implements AdditionViewInterface {
+public class ResultPresenter extends NumbersModel implements AdditionViewInterface {
 
     AdditionViewInterface additionView;
     NumbersModel numbersModel;
