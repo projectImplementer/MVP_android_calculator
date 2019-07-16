@@ -57,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("DefaultLocale")
     public void ShowData_Click(View v) {
-      // digit1 = findViewById(R.id.Digit1);
+        EditText digit0 = findViewById(R.id.Digit0);
+        number2 = findViewById(R.id.nr2);
     }
 
 }
