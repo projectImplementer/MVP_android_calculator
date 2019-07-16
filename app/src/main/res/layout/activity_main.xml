@@ -219,8 +219,8 @@
 
     <EditText
         android:id="@+id/number1Show"
-        android:layout_width="411dp"
-        android:layout_height="78dp"
+        android:layout_width="408dp"
+        android:layout_height="74dp"
         android:layout_marginStart="70dp"
         android:layout_marginLeft="70dp"
         android:layout_marginEnd="47dp"
@@ -231,7 +231,7 @@
         android:inputType="numberDecimal"
         android:windowSoftInputMode="stateAlwaysHidden"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintHorizontal_bias="0.614"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
