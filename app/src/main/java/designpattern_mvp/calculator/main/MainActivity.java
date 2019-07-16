@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity implements AdditionViewInter
                     return true;
                 case R.id.generate_results:
                     mTextMessage.setText(R.string.title_dashboard);
-                    resultPresenterView.multipleResult(Double.valueOf(nr1.getText().toString()), Double.valueOf(nr2.getText().toString()));
+                    //resultPresenterView.multipleResult(Double.valueOf(nr1.getText().toString()), Double.valueOf(nr2.getText().toString()));
+                    //TODO: set logic in Presenter
                     return true;
                 case R.id.logs:
                     mTextMessage.setText(R.string.title_notifications);
@@ -70,19 +71,25 @@ public class MainActivity extends AppCompatActivity implements AdditionViewInter
         View et = getCurrentFocus();
         EditText e = (EditText) et;
         s += e.getText().toString() + ((Button) v).getText().toString();
-        e.setText(s);
+        e.setText(s); //TODO: set logic in presenter
     }
 
     public void clearInput_Click(View v) {
-        nr1.setText("");
-        nr2.setText("");
+        resultPresenterView.setEmptyEditTexts(nr1, nr2);
     }
 
 
 
     @Override
     public double[] multipleResult(double number1, double number2) {
-        return new double[0];
+        return new double[]
+                {
+                        number1 + number2,
+                        number1 - number2,
+                        number1 * number2,
+                        number1 / number2,
+                        number1 % number2
+                };
     }
 
     @Override
