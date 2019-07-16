@@ -1,5 +1,6 @@
 package designpattern_mvp.calculator.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 
@@ -30,6 +31,16 @@ public class MainActivity extends AppCompatActivity implements AdditionViewInter
 
         nr1.setInputType(InputType.TYPE_NULL);
         nr2.setInputType(InputType.TYPE_NULL);
+    }
+
+    public void showResultInSecondScreen_Click(View v){
+        Intent goToSecondPage = new Intent(this, SecondActivity.class);
+
+        String res = resultPresenterView.multipleResult(Double.valueOf(nr1.getText().toString()), Double.valueOf(nr2.getText().toString()));
+
+        goToSecondPage.putExtra("key", res);
+        startActivity(goToSecondPage);
+
     }
 
     public void writeData_Click(View v) {

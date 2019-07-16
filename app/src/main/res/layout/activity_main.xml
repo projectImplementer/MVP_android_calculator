@@ -244,5 +244,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Digit1" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="192dp"
+        android:layout_height="73dp"
+        android:onClick="showResultInSecondScreen_Click"
+        android:text="Show Result"
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="598dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

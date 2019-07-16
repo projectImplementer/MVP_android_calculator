@@ -29,14 +29,14 @@ public class ResultPresenter implements ResultPresenterInterface {
     }
 
     @Override
-    public double[] multipleResult(double number1, double number2) {
-        return new double[]
-                {
-                        number1 + number2,
-                        number1 - number2,
-                        number1 * number2,
-                        number1 / number2,
-                        number1 % number2
-                };
+    public String multipleResult(double number1, double number2) {
+        String myResult = "";
+            myResult += myResult + (number1 + number2)  + "\n";
+            myResult += myResult + (number1 - number2) + "\n";
+            myResult += myResult + (number1 * number2) + "\n";
+            myResult += myResult + (number1 / number2) + "\n";
+            myResult += myResult + (number1 % number2) + "\n";
+
+        return myResult;
     }
 }
