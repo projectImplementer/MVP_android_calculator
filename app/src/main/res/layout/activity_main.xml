@@ -15,16 +15,13 @@
         android:layout_marginStart="164dp"
         android:layout_marginLeft="164dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
         android:onClick="writeData_Click"
         android:text="0"
         android:textColor="#FFFFFF"
         android:textSize="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/number2Show"
-        app:layout_constraintVertical_bias="0.921" />
+        app:layout_constraintTop_toBottomOf="@+id/Digit2" />
 
     <Button
         android:id="@+id/Digit1"
@@ -32,16 +29,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginTop="56dp"
         android:background="@android:color/transparent"
         android:onClick="writeData_Click"
         android:text="1"
         android:textColor="#FFFFFF"
         android:textSize="40dp"
-        app:layout_constraintEnd_toStartOf="@+id/Digit2"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Digit4" />
 
@@ -49,16 +42,19 @@
         android:id="@+id/Digit2"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginLeft="164dp"
-        android:layout_marginTop="328dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginRight="164dp"
         android:background="@android:color/transparent"
         android:onClick="writeData_Click"
         android:text="2"
         android:textColor="#FFFFFF"
         android:textSize="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/number2Show" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/Digit1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toEndOf="@+id/Digit1" />
 
     <Button
         android:id="@+id/Digit3"
@@ -66,7 +62,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="52dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="@android:color/transparent"
@@ -74,10 +69,10 @@
         android:text="3"
         android:textColor="#FFFFFF"
         android:textSize="40dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Digit2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/Digit2"
-        app:layout_constraintTop_toBottomOf="@+id/Digit6" />
+        app:layout_constraintStart_toEndOf="@+id/Digit2" />
 
     <Button
         android:id="@+id/Digit4"
@@ -85,16 +80,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginTop="44dp"
         android:background="@android:color/transparent"
         android:onClick="writeData_Click"
         android:text="4"
         android:textColor="#FFFFFF"
         android:textSize="40dp"
-        app:layout_constraintEnd_toStartOf="@+id/Digit5"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Digit7" />
 
@@ -102,16 +93,15 @@
         android:id="@+id/Digit5"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginLeft="164dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
         android:background="@android:color/transparent"
         android:onClick="writeData_Click"
         android:text="5"
         android:textColor="#FFFFFF"
         android:textSize="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/number2Show" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/Digit4"
+        app:layout_constraintStart_toEndOf="@+id/Digit4" />
 
     <Button
         android:id="@+id/Digit6"
@@ -119,7 +109,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="48dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="@android:color/transparent"
@@ -127,10 +116,10 @@
         android:text="6"
         android:textColor="#FFFFFF"
         android:textSize="40dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Digit5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/Digit5"
-        app:layout_constraintTop_toBottomOf="@+id/Digit9" />
+        app:layout_constraintStart_toEndOf="@+id/Digit5" />
 
     <Button
         android:id="@+id/Digit7"
@@ -138,16 +127,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
         android:background="@android:color/transparent"
         android:onClick="writeData_Click"
         android:text="7"
         android:textColor="#FFFFFF"
         android:textSize="40dp"
-        app:layout_constraintEnd_toStartOf="@+id/digit8"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/number2Show" />
 
@@ -155,19 +140,15 @@
         android:id="@+id/digit8"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginLeft="164dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginBottom="332dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
         android:background="@android:color/transparent"
         android:onClick="writeData_Click"
         android:text="8"
         android:textColor="#FFFFFF"
         android:textSize="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/nav_view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/number2Show"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/Digit7"
+        app:layout_constraintStart_toEndOf="@+id/Digit7" />
 
     <Button
         android:id="@+id/Digit9"
@@ -175,7 +156,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="120dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="@android:color/transparent"
@@ -183,22 +163,11 @@
         android:text="9"
         android:textColor="#FFFFFF"
         android:textSize="40dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/digit8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/digit8"
-        app:layout_constraintTop_toBottomOf="@+id/number2Show" />
+        app:layout_constraintStart_toEndOf="@+id/digit8" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
-        android:onClick="clearInput_Click"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
 
     <EditText
         android:id="@+id/number2Show"
@@ -241,7 +210,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="36dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="@android:color/transparent"
@@ -252,10 +220,29 @@
         android:textColor="#FFFFFF"
         android:textSize="40dp"
         android:windowSoftInputMode="stateAlwaysHidden"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Digit0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/Digit0"
-        app:layout_constraintTop_toBottomOf="@+id/Digit3" />
+        app:layout_constraintStart_toEndOf="@+id/Digit0" />
+
+    <Button
+        android:id="@+id/digit10"
+        android:layout_width="107dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="clearInput_Click"
+        android:text="CLEAR"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/Digit0"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Digit1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

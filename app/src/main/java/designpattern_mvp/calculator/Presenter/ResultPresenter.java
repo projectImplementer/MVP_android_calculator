@@ -20,6 +20,7 @@ public class ResultPresenter {
     public void setEmptyEditTexts(EditText... textValues) {
         for (EditText text:textValues) {
             text.setText("");
+
         }
     }
 }

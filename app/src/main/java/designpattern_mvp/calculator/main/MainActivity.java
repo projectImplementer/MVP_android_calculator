@@ -22,38 +22,14 @@ import designpattern_mvp.calculator.R;
 import designpattern_mvp.calculator.View.AdditionViewInterface;
 
 public class MainActivity extends AppCompatActivity implements AdditionViewInterface {
-    private TextView mTextMessage;
     private ResultPresenter resultPresenterView;
     EditText nr1;
     EditText nr2;
-
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.history:
-                    mTextMessage.setText(R.string.title_home);
-                    return true;
-                case R.id.generate_results:
-                    mTextMessage.setText(R.string.title_dashboard);
-                    //resultPresenterView.multipleResult(Double.valueOf(nr1.getText().toString()), Double.valueOf(nr2.getText().toString()));
-                    //TODO: set logic in Presenter
-                    return true;
-                case R.id.logs:
-                    mTextMessage.setText(R.string.title_notifications);
-                    return true;
-            }
-            return false;
-        }
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        BottomNavigationView navView = findViewById(R.id.nav_view);
         resultPresenterView = new ResultPresenter(this);
 
         nr1 = findViewById(R.id.number1Show);
@@ -61,9 +37,6 @@ public class MainActivity extends AppCompatActivity implements AdditionViewInter
 
         nr1.setInputType(InputType.TYPE_NULL);
         nr2.setInputType(InputType.TYPE_NULL);
-
-        mTextMessage = findViewById(R.id.message);
-        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
     public void writeData_Click(View v) {
