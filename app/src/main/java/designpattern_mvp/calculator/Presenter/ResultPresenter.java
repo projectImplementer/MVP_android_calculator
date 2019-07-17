@@ -6,6 +6,9 @@ import android.widget.EditText;
 import designpattern_mvp.calculator.Model.NumbersModel;
 import designpattern_mvp.calculator.View.AdditionViewInterface;
 
+import static designpattern_mvp.calculator.Extensions.Messages.EMPTY_FIELDS_MESSAGE;
+import static designpattern_mvp.calculator.Extensions.StringExtensions.isNullOrEmpty;
+
 public class ResultPresenter implements ResultPresenterInterface {
 
     private AdditionViewInterface additionViewInterface;
@@ -29,14 +32,18 @@ public class ResultPresenter implements ResultPresenterInterface {
     }
 
     @Override
-    public String multipleResult(double number1, double number2) {
-        String myResult = "";
-            myResult += myResult + (number1 + number2)  + "\n";
-            myResult += myResult + (number1 - number2) + "\n";
-            myResult += myResult + (number1 * number2) + "\n";
-            myResult += myResult + (number1 / number2) + "\n";
-            myResult += myResult + (number1 % number2) + "\n";
+    public String multipleResult(String number1, String number2) {
+        String result = EMPTY_FIELDS_MESSAGE;
 
-        return myResult;
+        if(!isNullOrEmpty(number1) && !isNullOrEmpty(number2)) {
+            double nr1 = Double.valueOf(number1), nr2 = Double.valueOf(number1);
+            result += result + (nr1 + nr2) + "\n";
+            result += result + (nr1 - nr2) + "\n";
+            result += result + (nr1 * nr2) + "\n";
+            result += result + (nr1 / nr2) + "\n";
+            result += result + (nr1 % nr2) + "\n";
+        }
+
+        return result;
     }
 }

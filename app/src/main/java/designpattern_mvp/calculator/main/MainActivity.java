@@ -17,6 +17,8 @@ import designpattern_mvp.calculator.View.AdditionViewInterface;
 
 public class MainActivity extends AppCompatActivity implements AdditionViewInterface {
     private ResultPresenter resultPresenterView;
+    private static final int MAIN_ACTIVITY_REQUEST_CODE = 0;
+
     EditText nr1;
     EditText nr2;
 
@@ -36,10 +38,10 @@ public class MainActivity extends AppCompatActivity implements AdditionViewInter
     public void showResultInSecondScreen_Click(View v){
         Intent goToSecondPage = new Intent(this, SecondActivity.class);
 
-        String res = resultPresenterView.multipleResult(Double.valueOf(nr1.getText().toString()), Double.valueOf(nr2.getText().toString()));
+        goToSecondPage.putExtra("resultKey", resultPresenterView.multipleResult(nr1.getText().toString(),
+                nr2.getText().toString()));
 
-        goToSecondPage.putExtra("key", res);
-        startActivity(goToSecondPage);
+        startActivityForResult(goToSecondPage, MAIN_ACTIVITY_REQUEST_CODE);
 
     }
 

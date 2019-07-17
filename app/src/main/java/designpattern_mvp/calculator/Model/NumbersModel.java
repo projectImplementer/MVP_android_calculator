@@ -3,7 +3,6 @@ package designpattern_mvp.calculator.Model;
 public class NumbersModel implements NumbersModelInterface {
     private double nr1, nr2;
     private double listWithResults;
-    public static final String EMPTY_STRING = "";
 
     public NumbersModel() {
 
