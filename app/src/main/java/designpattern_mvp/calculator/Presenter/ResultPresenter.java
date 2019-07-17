@@ -27,8 +27,10 @@ public class ResultPresenter implements ResultPresenterInterface {
     }
 
     public void writeToTextField(Button pressedButton, EditText editTextToChange){
-        String concatenatedText = "" + editTextToChange.getText().toString() + pressedButton.getText().toString();
-        editTextToChange.setText(concatenatedText);
+        if(editTextToChange != null) {
+            String concatenatedText = "" + editTextToChange.getText().toString() + pressedButton.getText().toString();
+            editTextToChange.setText(concatenatedText);
+        }
     }
 
     @Override
@@ -36,12 +38,12 @@ public class ResultPresenter implements ResultPresenterInterface {
         String result = EMPTY_FIELDS_MESSAGE;
 
         if(!isNullOrEmpty(number1) && !isNullOrEmpty(number2)) {
-            double nr1 = Double.valueOf(number1), nr2 = Double.valueOf(number1);
-            result += result + (nr1 + nr2) + "\n";
-            result += result + (nr1 - nr2) + "\n";
-            result += result + (nr1 * nr2) + "\n";
-            result += result + (nr1 / nr2) + "\n";
-            result += result + (nr1 % nr2) + "\n";
+            double nr1 = Double.valueOf(number1), nr2 = Double.valueOf(number2);
+            result = (nr1 + nr2) + "\n";
+            result += (nr1 - nr2) + "\n";
+            result += (nr1 * nr2) + "\n";
+            result += (nr1 / nr2) + "\n";
+            result += (nr1 % nr2) + "\n";
         }
 
         return result;

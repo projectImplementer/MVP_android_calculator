@@ -15,21 +15,10 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+
+        String savedExtra = getIntent().getStringExtra("resultKey");
+        TextView text = findViewById(R.id.showResults);
+        text.setText(savedExtra);
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == MAIN_ACTIVITY_REQUEST_CODE) {
-            if (resultCode == RESULT_OK) {
-
-                String returnString = data.getStringExtra("resultKey");
-
-                TextView textView = findViewById(R.id.showResults);
-
-                textView.setText(returnString);
-            }
-        }
-    }
 }
