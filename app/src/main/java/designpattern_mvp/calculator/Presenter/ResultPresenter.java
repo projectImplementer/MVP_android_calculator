@@ -7,6 +7,7 @@ import designpattern_mvp.calculator.Model.NumbersModel;
 import designpattern_mvp.calculator.View.AdditionViewInterface;
 
 import static designpattern_mvp.calculator.Extensions.Messages.EMPTY_FIELDS_MESSAGE;
+import static designpattern_mvp.calculator.Extensions.StringExtensions.NEW_LINE;
 import static designpattern_mvp.calculator.Extensions.StringExtensions.isNullOrEmpty;
 
 public class ResultPresenter implements ResultPresenterInterface {
@@ -39,15 +40,11 @@ public class ResultPresenter implements ResultPresenterInterface {
 
         if(!isNullOrEmpty(number1) && !isNullOrEmpty(number2)) {
             double nr1 = Double.valueOf(number1), nr2 = Double.valueOf(number2);
-            System.out.println("Addition:");
-            result = (nr1 + nr2) + "\n" + "\n";
-            System.out.println("Subtraction:");
+
+            result = "Addition" + NEW_LINE + (nr1 + nr2) + NEW_LINE;
             result += (nr1 - nr2) + "\n" + "\n";
-            System.out.println("Multiplication:");
             result += (nr1 * nr2) + "\n" + "\n";
-            System.out.println("Division:");
             result += (nr1 / nr2) + "\n" + "\n";
-            System.out.println("Percentage:");
             result += (nr1 % nr2) + "\n" + "\n";
         }
 
