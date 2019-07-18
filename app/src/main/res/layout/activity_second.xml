@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/showResults"
-        android:layout_width="408dp"
-        android:layout_height="667dp"
+        android:layout_width="394dp"
+        android:layout_height="554dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"

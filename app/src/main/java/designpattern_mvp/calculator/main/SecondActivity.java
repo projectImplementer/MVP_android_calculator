@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
 import designpattern_mvp.calculator.R;
@@ -17,24 +16,9 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        String saved = getIntent().getStringExtra("resultKey");
-        TextView myText = (TextView) findViewById(R.id.showResults);
-        myText.setText(saved);
+        String savedExtra = getIntent().getStringExtra("resultKey");
+        TextView text = findViewById(R.id.showResults);
+        text.setText(savedExtra);
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == MAIN_ACTIVITY_REQUEST_CODE) {
-            if (resultCode == RESULT_OK) {
-
-                String returnString = data.getStringExtra("resultKey");
-
-                TextView textView = findViewById(R.id.showResults);
-
-                textView.setText(returnString);
-            }
-        }
-    }
 }
