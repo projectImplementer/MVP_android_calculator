@@ -1,0 +1,16 @@
+apply plugin: 'java'
+buildscript {
+  repositories {
+    google()
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:3.4.2'
+  }
+}
+
+dependencies {
+  implementation 'https://com.github.stephanenicolas.toothpick:toothpick-runtime:2.x'
+  // and for android -> implementation 'com.github.stephanenicolas.toothpick:smoothie-androidx:2.x'
+  annotationProcessor 'com.github.stephanenicolas.toothpick:toothpick-compiler:2.x'
+}

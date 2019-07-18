@@ -9,6 +9,7 @@ import designpattern_mvp.calculator.Model.NumbersModel;
 import designpattern_mvp.calculator.View.AdditionViewInterface;
 
 import static designpattern_mvp.calculator.Extensions.Messages.EMPTY_FIELDS_MESSAGE;
+import static designpattern_mvp.calculator.Extensions.StringExtensions.DOUBLE_LINE;
 import static designpattern_mvp.calculator.Extensions.StringExtensions.NEW_LINE;
 import static designpattern_mvp.calculator.Extensions.StringExtensions.isNullOrEmpty;
 import static java.lang.Integer.parseInt;
@@ -46,11 +47,11 @@ public class ResultPresenter implements ResultPresenterInterface {
         if(!isNullOrEmpty(number1) && !isNullOrEmpty(number2)) {
             double nr1 = Double.valueOf(number1), nr2 = Double.valueOf(number2);
 
-            result = "Addition:" + NEW_LINE + df.format(((nr1 + nr2)) + NEW_LINE + NEW_LINE;
-            result += "Subtraction:" + NEW_LINE + (nr1 - nr2) + NEW_LINE + NEW_LINE;
-            result += "Multiplication:" + NEW_LINE + (nr1 * nr2) + NEW_LINE + NEW_LINE;
-            result += "Division:" + NEW_LINE + (nr1 / nr2) + NEW_LINE + NEW_LINE;
-            result += "Percentage:" + NEW_LINE + (nr1 % nr2) + NEW_LINE + NEW_LINE;
+            result = "Addition:" + NEW_LINE + (nr1 + nr2) + DOUBLE_LINE;
+            result += "Subtraction:" + NEW_LINE + (nr1 - nr2) + DOUBLE_LINE;
+            result += "Multiplication:" + NEW_LINE + (nr1 * nr2) + DOUBLE_LINE;
+            result += "Division:" + NEW_LINE + (nr1 / nr2) + DOUBLE_LINE;
+            result += "Percentage:" + NEW_LINE + (nr1 % nr2) + DOUBLE_LINE;
         }
 
         return result;
