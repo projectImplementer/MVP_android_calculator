@@ -37,13 +37,12 @@ public class ResultPresenter implements ResultPresenterInterface {
 
         if(!isNullOrEmpty(number1) && !isNullOrEmpty(number2)) {
             double nr1 = Double.valueOf(number1), nr2 = Double.valueOf(number1);
-            result += result + (nr1 + nr2) + "\n";
-            result += result + (nr1 - nr2) + "\n";
-            result += result + (nr1 * nr2) + "\n";
-            result += result + (nr1 / nr2) + "\n";
-            result += result + (nr1 % nr2) + "\n";
+            result = (nr1 + nr2) + "\n";
+            result += (nr1 - nr2) + "\n";
+            result += (nr1 * nr2) + "\n";
+            result += (nr1 / nr2) + "\n";
+            result += (nr1 % nr2) + "\n";
         }
-
         return result;
     }
 }
