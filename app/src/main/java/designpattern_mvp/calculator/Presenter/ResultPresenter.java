@@ -39,11 +39,16 @@ public class ResultPresenter implements ResultPresenterInterface {
 
         if(!isNullOrEmpty(number1) && !isNullOrEmpty(number2)) {
             double nr1 = Double.valueOf(number1), nr2 = Double.valueOf(number2);
-            result = (nr1 + nr2) + "\n";
-            result += (nr1 - nr2) + "\n";
-            result += (nr1 * nr2) + "\n";
-            result += (nr1 / nr2) + "\n";
-            result += (nr1 % nr2) + "\n";
+            System.out.println("Addition:");
+            result = (nr1 + nr2) + "\n" + "\n";
+            System.out.println("Subtraction:");
+            result += (nr1 - nr2) + "\n" + "\n";
+            System.out.println("Multiplication:");
+            result += (nr1 * nr2) + "\n" + "\n";
+            System.out.println("Division:");
+            result += (nr1 / nr2) + "\n" + "\n";
+            System.out.println("Percentage:");
+            result += (nr1 % nr2) + "\n" + "\n";
         }
 
         return result;
