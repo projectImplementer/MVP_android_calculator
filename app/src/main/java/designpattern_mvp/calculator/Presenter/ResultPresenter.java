@@ -3,12 +3,15 @@ package designpattern_mvp.calculator.Presenter;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.text.DecimalFormat;
+
 import designpattern_mvp.calculator.Model.NumbersModel;
 import designpattern_mvp.calculator.View.AdditionViewInterface;
 
 import static designpattern_mvp.calculator.Extensions.Messages.EMPTY_FIELDS_MESSAGE;
 import static designpattern_mvp.calculator.Extensions.StringExtensions.NEW_LINE;
 import static designpattern_mvp.calculator.Extensions.StringExtensions.isNullOrEmpty;
+import static java.lang.Integer.parseInt;
 
 public class ResultPresenter implements ResultPresenterInterface {
 
@@ -38,14 +41,16 @@ public class ResultPresenter implements ResultPresenterInterface {
     public String multipleResult(String number1, String number2) {
         String result = EMPTY_FIELDS_MESSAGE;
 
+        DecimalFormat df = new DecimalFormat("#.##");
+
         if(!isNullOrEmpty(number1) && !isNullOrEmpty(number2)) {
             double nr1 = Double.valueOf(number1), nr2 = Double.valueOf(number2);
 
-            result = "Addition" + NEW_LINE + (nr1 + nr2) + NEW_LINE;
-            result += (nr1 - nr2) + "\n" + "\n";
-            result += (nr1 * nr2) + "\n" + "\n";
-            result += (nr1 / nr2) + "\n" + "\n";
-            result += (nr1 % nr2) + "\n" + "\n";
+            result = "Addition:" + NEW_LINE + df.format(((nr1 + nr2)) + NEW_LINE + NEW_LINE;
+            result += "Subtraction:" + NEW_LINE + (nr1 - nr2) + NEW_LINE + NEW_LINE;
+            result += "Multiplication:" + NEW_LINE + (nr1 * nr2) + NEW_LINE + NEW_LINE;
+            result += "Division:" + NEW_LINE + (nr1 / nr2) + NEW_LINE + NEW_LINE;
+            result += "Percentage:" + NEW_LINE + (nr1 % nr2) + NEW_LINE + NEW_LINE;
         }
 
         return result;
