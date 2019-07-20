@@ -1,1 +1,1 @@
-include ':app', ':toothpick-compiler', ':toothpick', ':toothpick-runtime', ':toothpick-testing', ':smoothie'
+include ':app'

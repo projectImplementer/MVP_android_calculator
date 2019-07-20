@@ -5,7 +5,10 @@ import android.widget.EditText;
 
 import java.text.DecimalFormat;
 
+import javax.inject.Inject;
+
 import designpattern_mvp.calculator.Model.NumbersModel;
+import designpattern_mvp.calculator.Model.NumbersModelInterface;
 import designpattern_mvp.calculator.View.AdditionViewInterface;
 
 import static designpattern_mvp.calculator.Extensions.Messages.EMPTY_FIELDS_MESSAGE;
@@ -16,14 +19,8 @@ import static java.lang.Integer.parseInt;
 
 public class ResultPresenter implements ResultPresenterInterface {
 
-    private AdditionViewInterface additionViewInterface;
-    private NumbersModel numbersModel;
-
-
-    public ResultPresenter(AdditionViewInterface additionViewInterface) {
-        this.numbersModel = new NumbersModel();
-        this.additionViewInterface = additionViewInterface;
-    }
+    private AdditionViewInterface additionView;
+    private NumbersModelInterface numbersModel;
 
     public void setEmptyEditTexts(EditText... textValues) {
         for (EditText text : textValues) {
