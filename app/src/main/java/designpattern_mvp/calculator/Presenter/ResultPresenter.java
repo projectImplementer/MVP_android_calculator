@@ -14,6 +14,7 @@ import designpattern_mvp.calculator.View.AdditionViewInterface;
 import static designpattern_mvp.calculator.Extensions.Messages.EMPTY_FIELDS_MESSAGE;
 import static designpattern_mvp.calculator.Extensions.StringExtensions.DOUBLE_LINE;
 import static designpattern_mvp.calculator.Extensions.StringExtensions.NEW_LINE;
+import static designpattern_mvp.calculator.Extensions.StringExtensions.SEPARATOR;
 import static designpattern_mvp.calculator.Extensions.StringExtensions.isNullOrEmpty;
 import static java.lang.Integer.parseInt;
 
@@ -44,11 +45,11 @@ public class ResultPresenter implements ResultPresenterInterface {
         if(!isNullOrEmpty(number1) && !isNullOrEmpty(number2)) {
             double nr1 = Double.valueOf(number1), nr2 = Double.valueOf(number2);
 
-            result = "Addition: nr1 + nr2" + NEW_LINE + (nr1 + nr2) + DOUBLE_LINE;
-            result += "Subtraction: nr1 - nr2" + NEW_LINE + (nr1 - nr2) + DOUBLE_LINE;
-            result += "Multiplication: nr1 * nr2" + NEW_LINE + (nr1 * nr2) + DOUBLE_LINE;
-            result += "Division: nr1 / nr2" + NEW_LINE + (nr1 / nr2) + DOUBLE_LINE;
-            result += "Percentage: nr1 % nr2" + NEW_LINE + (nr1 % nr2) + DOUBLE_LINE;
+            result = "Addition: nr1 + nr2" + NEW_LINE + (nr1 + nr2) + NEW_LINE + SEPARATOR + DOUBLE_LINE;
+            result += "Subtraction: nr1 - nr2" + NEW_LINE + (nr1 - nr2) + NEW_LINE + SEPARATOR + DOUBLE_LINE;
+            result += "Multiplication: nr1 * nr2" + NEW_LINE + (nr1 * nr2) + NEW_LINE + SEPARATOR + DOUBLE_LINE;
+            result += "Division: nr1 / nr2" + NEW_LINE + (nr1 / nr2) + NEW_LINE + SEPARATOR + DOUBLE_LINE;
+            result += "Percentage: nr1 % nr2" + NEW_LINE + (nr1 % nr2) + NEW_LINE + SEPARATOR + DOUBLE_LINE;
         }
 
         return result;

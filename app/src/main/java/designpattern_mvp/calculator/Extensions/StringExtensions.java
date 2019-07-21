@@ -6,6 +6,7 @@ public final class StringExtensions {
     public static final String NEW_LINE = "\n";
     public static final String DOUBLE_LINE = "\n\n";
     public static final String ROOTSCOPE = "rootscope";
+    public static final String SEPARATOR = "_______________";
 
 
     public static boolean isNullOrEmpty(String myString){
