@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LearningDesignPattern_MVP_Calculator</string>
+    <string name="app_name">Arithmetic Calculator</string>
     <string name="title_home">Clear</string>
     <string name="title_dashboard">Generate Results</string>
     <string name="title_notifications">Logs</string>
