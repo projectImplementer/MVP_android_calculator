@@ -40,6 +40,7 @@ public class Calculation
 				nr1 % nr2,
 				Math.pow(nr1, nr2),
 				Math.pow(Math.E, Math.log(nr1)/nr2)
+				//Alternative Math.sqrt(nr1,nr2);	
 			};
 	}
 
